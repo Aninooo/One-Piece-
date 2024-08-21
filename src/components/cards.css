@@ -1,0 +1,118 @@
+.container {
+    background-color: #252525;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    
+}
+
+.card {
+    background-color: #1A1A1A;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white;
+    position: relative; 
+    cursor: pointer;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+    pointer-events: none; 
+    z-index: 1; 
+}
+
+.card:hover::before {
+    left: 100%;
+    top: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+    background-color: #1A1A1A; 
+    transform: scale(1.05); 
+}
+
+.card img {
+    position: relative;
+    z-index: 2; 
+
+}
+
+.card img {
+    width: 300px;
+    height: 500px;
+    max-width: 150px; 
+    max-height: 150px; 
+    display: block;
+    margin: 0 auto; 
+    border-bottom: 1px solid #ddd;
+    object-fit: cover;
+    border-radius: 10px 10px 10px 10px;
+}
+.card-details {
+    padding: 10px;
+    color: white;
+}
+
+.card-details h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.card-details p {
+    margin: 0;
+    color: #c7bdbd;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.member-details {
+    margin-top: 20px;
+    background-color: #1A1A1A;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.additional-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.additional-images img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
