@@ -7,7 +7,6 @@ import Cards from './components/Cards.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Cards/>
-    
   </StrictMode>,
 )
 
