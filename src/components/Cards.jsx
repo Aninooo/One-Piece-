@@ -28,7 +28,7 @@ function Cards() {
                 <div className="cards">
                     {shcMembers.map((member, index) => (
                         <div className="card" key={index} onClick={() => handleClick(member)}>
-                           <img src={`/assets/shc/${member.image}`} alt={member.name} />
+                           <img src={`./src/assets/shc/${member.image}`} alt={member.name} />
                             <div className="card-details">
                                 <h3>{member.name}</h3>
                                 <p>{member.position}</p>
