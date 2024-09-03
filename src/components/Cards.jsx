@@ -28,7 +28,7 @@ function Cards() {
                 <div className="cards">
                     {shcMembers.map((member, index) => (
                         <div className="card" key={index} onClick={() => handleClick(member)}>
-                           <img src={`/public/shc/${member.image}`} alt={member.name} />
+                           <img src={`src/shc/${member.image}`} alt={member.name} />
                             <div className="card-details">
                                 <h3>{member.name}</h3>
                                 <p>{member.position}</p>
@@ -43,7 +43,7 @@ function Cards() {
                         <p>{selectedMember.bio}</p>
                         <div className="additional-images">
                             {selectedMember.additionalImages.map((image, idx) => (
-                                <img key={idx} src={`/public/shc/${image}`} alt={selectedMember.name} />
+                                <img key={idx} src={`src/shc/${image}`} alt={selectedMember.name} />
                             ))}
                         </div>
                     </div>
